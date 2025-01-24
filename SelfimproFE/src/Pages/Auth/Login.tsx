@@ -44,7 +44,7 @@ const Login = () => {
   return (
     <div>
       <Toaster />
-      <div className="w-full h-screen  bg-[#011B33] justify-center flex flex-col  gap-3 items-center">
+      <div className="w-full h-screen  bg-[#5a71f1] justify-center flex flex-col  gap-3 items-center">
         <div className="w-[90%] h-[40%] sm:w-[30%] sm:h-[55%] bg-[white] rounded-md justify-center flex items-center ">
           {loading && (
             <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-50 cursor-not-allowed "></div>
@@ -83,7 +83,7 @@ const Login = () => {
               type="submit"
               className={`${
                 loading
-                  ? "bg-green-700 cursor-not-allowed animate-pulse text-white border rounded-md px-[120px] py-[4px] "
+                  ? "bg-blue-700 cursor-not-allowed animate-pulse text-white border rounded-md px-[120px] py-[4px] "
                   : "border rounded-md w-[95%]  justify-center h-[35px] sm:p-[10px] flex items-center mt-3 bg-green-400 text-[15px] font-bold  text-white"
               }`}
             >
