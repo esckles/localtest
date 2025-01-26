@@ -12,4 +12,5 @@ mainApp(app);
 
 app.listen(parseInt(process.env.PORT as string), () => {
   dbConfig();
+  console.log(`Server is running on PORT ${process.env.PORT}`);
 });
