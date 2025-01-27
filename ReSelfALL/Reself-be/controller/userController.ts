@@ -115,3 +115,24 @@ export const signIn = async (req: Request, res: Response) => {
     return res.status(404).json({ message: "Erro login", status: 404 });
   }
 };
+
+export const Readone = async (req: Request, res: Response) => {
+  try {
+    const { userID } = req.params;
+    const user = await userModel.findById(userID);
+    return res
+      .status(200)
+      .json({ message: "One user read successfully", data: user, status: 200 });
+  } catch (error) {
+    return res
+      .status(404)
+      .json({ message: "Error reading one user", status: 404 });
+  }
+};
+
+export const readAlluser = async (req: Request, res: Response) => {
+  try {
+    const user = await userModel.find();
+    return res.status(200).json({ message: "h" });
+  } catch (error) {}
+};
