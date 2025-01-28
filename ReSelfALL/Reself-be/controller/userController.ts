@@ -133,6 +133,8 @@ export const Readone = async (req: Request, res: Response) => {
 export const readAlluser = async (req: Request, res: Response) => {
   try {
     const user = await userModel.find();
-    return res.status(200).json({ message: "h" });
+    return res
+      .status(200)
+      .json({ message: "All user read successfully", data: user, status: 200 });
   } catch (error) {}
 };
