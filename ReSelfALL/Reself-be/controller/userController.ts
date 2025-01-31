@@ -136,5 +136,9 @@ export const readAlluser = async (req: Request, res: Response) => {
     return res
       .status(200)
       .json({ message: "All user read successfully", data: user, status: 200 });
-  } catch (error) {}
+  } catch (error) {
+    return res
+      .status(404)
+      .json({ message: "Error reading all users", status: 404 });
+  }
 };
